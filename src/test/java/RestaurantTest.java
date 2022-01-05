@@ -75,5 +75,23 @@ class RestaurantTest {
         assertEquals(restaurant.totalOrderValue(items), 119);
     }
 
+    @Test
+    public void should_return_zero_totalOrderValue_for_none_selected_items(){
+        List<String> items = null;
+        assertEquals(restaurant.totalOrderValue(items), 0);
+        items = new ArrayList<>();
+        assertEquals(restaurant.totalOrderValue(items), 0);
+
+    }
+
     //<<<<<<<<<<<<<<<<<<<<<<<OrderTotal>>>>>>>>>>>>>>>>>>>>>>>
+
+    //<<<<<<<<<<<<<<<<<<<<<<<OtherTestCases>>>>>>>>>>>>>>>>>>>>
+
+    //This method is just for increasing line coverage
+    @Test
+    public void should_print_display_details() {
+        restaurant.displayDetails();
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<OtherTestCases>>>>>>>>>>>>>>>>>>>>
 }

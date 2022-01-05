@@ -54,8 +54,18 @@ public class Restaurant {
         menu.remove(itemToBeRemoved);
     }
 
-    public double totalOrderValue(List<String> items){
-        return 0.0;
+    public int totalOrderValue(List<String> items){
+        int totalOrderValue = 0;
+
+        if(items == null || items.size() == 0) {
+            return totalOrderValue;
+        }
+
+        for(int i = 0; i < items.size(); i++){
+            Item item = findItemByName(items.get(i));
+            totalOrderValue += item.getPrice();
+        }
+        return totalOrderValue;
     }
 
     public void displayDetails(){
@@ -70,5 +80,4 @@ public class Restaurant {
     public String getName() {
         return name;
     }
-
 }
