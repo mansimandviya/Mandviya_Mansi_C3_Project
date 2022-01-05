@@ -53,6 +53,11 @@ public class Restaurant {
 
         menu.remove(itemToBeRemoved);
     }
+
+    public double totalOrderValue(List<String> items){
+        return 0.0;
+    }
+
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
                 +"Location:"+ location + "\n"
